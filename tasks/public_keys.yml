@@ -1,0 +1,4 @@
+---
+
+- name: copy public key to public_keys directory for use by roles
+  copy: src="{{ prelude_public_key_source }}" dest="public_keys/{{ prelude_public_key_destination_name }}"

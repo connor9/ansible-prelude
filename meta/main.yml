@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  description: Performs pre-configuration for provisioning a project on a host computer
+  author: British Antarctic Survey - Web and Applications Team
+  company: British Antarctic Survey
+  license: MIT
+  min_ansible_version: 1.6
+  categories:
+  - packaging
+  - system
+
+armadillo_info:
+  name: Prelude
+  version: 0.1.0
+  source: git@stash.ceh.ac.uk:7999/barc/prelude.git
+
+dependencies: []

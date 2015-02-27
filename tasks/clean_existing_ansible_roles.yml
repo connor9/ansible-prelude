@@ -1,0 +1,11 @@
+---
+
+- name: list roles in ansible roles directory
+  shell: "ls -d {{ prelude_roles_directory_path }}/*/"
+  register: prelude_roles_directory_directories
+  ignore_errors: yes
+
+- name: remove existing roles in ansible roles directory
+  file: name={{ item }} state=absent
+  with_items: prelude_roles_directory_directories.stdout_lines
+  when: prelude_roles_directory_directories|success

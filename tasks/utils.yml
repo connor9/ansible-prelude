@@ -1,0 +1,9 @@
+---
+
+- name: determine if nmap is available
+  shell: "hash nmap"
+
+- name: determine if internal resources are available via nmap
+  shell: "nmap -sP --max-retries=1 --host-timeout=1500ms {{ prelude_internal_resource_check }} | grep '1 host up'"
+  register: prelude_fact_internal_resources_available
+  changed_when: False

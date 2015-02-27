@@ -1,0 +1,17 @@
+---
+# defaults file for prelude
+
+# Resource availability check
+prelude_internal_resource_check: "stash.ceh.ac.uk"
+
+# Public key check
+prelude_public_key_source: "~/.ssh/id_rsa.pub"
+prelude_public_key_destination_name: "{{ ansible_env.USER }}.pub"
+
+# Role directory
+prelude_roles_directory_path: "roles"
+
+# Role files
+prelude_roles_file_path: ".."
+prelude_roles_file_internal: "ansible-roles-internal.yml"
+prelude_roles_file_external: "ansible-roles-external.yml"
