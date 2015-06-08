@@ -6,8 +6,8 @@ Performs pre-configuration for provisioning a project on a host computer
 
 ## Overview
 
-* Copies your public key to relevant directory in the project to ensure it used by bootstrapping roles.
-* Installs required ansible roles from either internal or external sources based on their availability.
+* Copies a public key to the relevant directory in a project for availability in bootstrapping roles
+* Installs any required Ansible roles for a project from either internal, if available, or falling back to external sources
 
 ## Availability
 
@@ -20,6 +20,11 @@ This role is designed for internal use but if useful can be shared publicly.
 #### BAS Ansible Role Collection (BARC)
 
 None.
+
+#### Other
+
+* `nmap` **MUST** be available on your local computer
+* A public key **MUST** be available (as determined by the `prelude_public_key_source` variable)
 
 ### Variables
 
