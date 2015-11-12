@@ -1,17 +1,12 @@
 ---
 galaxy_info:
-  description: Performs pre-configuration for provisioning a project on a host computer
-  author: British Antarctic Survey - Web and Applications Team
+  description: Setup a control computer ready for using a project
+  author: Felix Fennell
   company: British Antarctic Survey
   license: MIT
-  min_ansible_version: 1.6
+  min_ansible_version: 1.8
   categories:
   - packaging
   - system
-
-armadillo_info:
-  name: Prelude
-  version: 0.1.2
-  source: git@stash.ceh.ac.uk:7999/barc/prelude.git
 
 dependencies: []

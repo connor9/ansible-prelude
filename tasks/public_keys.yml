@@ -1,7 +1,9 @@
 ---
+# Copy the current user's public key to project
 
 - name: ensure public_keys directory exists
-  file: path="public_keys" state=directory
-
+  file: path="{{ prelude_public_key_destination_directory }}" state=directory
 - name: copy public key to public_keys directory for use by roles
-  copy: src="{{ prelude_public_key_source }}" dest="public_keys/{{ prelude_public_key_destination_name }}"
+  copy:
+    src="{{ prelude_public_key_source }}"
+    dest="{{ prelude_public_key_destination_directory }}/{{ prelude_public_key_destination_name }}"

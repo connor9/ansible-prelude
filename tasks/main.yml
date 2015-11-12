@@ -1,10 +1,7 @@
 ---
-# tasks file for prelude
 
-- include: utils.yml
+- include: install_ansible_roles.yml tags=BARC_LOCAL_SYSTEM,BARC_CONFIGURE,BARC_CONFIGURE_LOCAL_SYSTEM
+  where: prelude_enable_feature_install_roles == true
 
-- include: public_keys.yml
-
-- include: clean_existing_ansible_roles.yml
-
-- include: install_ansible_roles.yml
+- include: public_keys.yml           tags=BARC_LOCAL_SYSTEM,BARC_CONFIGURE,BARC_CONFIGURE_LOCAL_SYSTEM
+  where: prelude_enable_feature_copy_public_key == true

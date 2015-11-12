@@ -1,17 +1,16 @@
 ---
 # defaults file for prelude
 
-# Resource availability check
-prelude_internal_resource_check: "stash.ceh.ac.uk"
+# Enable features
+prelude_enable_feature_install_roles: true
+prelude_enable_feature_copy_public_key: true
+
+# Roles file
+# Roles file assumed to be at:      [project root]/
+# Assumed to run from playbook at:  [project root]/provisioning/
+prelude_roles_file_path: "../roles.yml"
 
 # Public key check
 prelude_public_key_source: "~/.ssh/id_rsa.pub"
+prelude_public_key_destination_directory: "public_keys"
 prelude_public_key_destination_name: "{{ ansible_env.USER }}.pub"
-
-# Role directory
-prelude_roles_directory_path: "roles"
-
-# Role files
-prelude_roles_file_path: ".."
-prelude_roles_file_internal: "ansible-roles-internal.yml"
-prelude_roles_file_external: "ansible-roles-external.yml"
