@@ -6,9 +6,10 @@ prelude_enable_feature_install_roles: true
 prelude_enable_feature_copy_public_key: true
 
 # Roles file
-# Roles file assumed to be at:      [project root]/
-# Assumed to run from playbook at:  [project root]/provisioning/
-prelude_roles_file_path: "../roles.yml"
+# The ansible-galaxy task is set to run from the parent directory, i.e. the same level
+# Roles file assumed to be at:    [project root]/
+# Ansible Galaxy command run at:  [project root]/
+prelude_roles_file_path: "roles.yml"
 
 # Public key check
 prelude_public_key_source: "~/.ssh/id_rsa.pub"
