@@ -5,6 +5,12 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][unreleased]
 
+## 1.0.1 - 13/11/2015 [Hotfix]
+
+## Fixed
+
+* Fixing Ansible Galaxy task to run from the project root and so use an Ansible configuration file, if defined
+
 ## 1.0.0 - 12/11/2015
 
 ### Changed - BREAKING!

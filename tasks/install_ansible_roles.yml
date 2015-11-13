@@ -3,4 +3,6 @@
 
 - name: get project roles using ansible-galaxy including dependencies
   command: "ansible-galaxy install --role-file={{ prelude_roles_file_path }} --force"
+  args:
+    chdir: ../
   when: prelude_enable_feature_install_roles == true
