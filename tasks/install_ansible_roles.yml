@@ -1,9 +1,4 @@
 ---
 
 - name: install ansible galaxy roles from internal sources
-  command: "ansible-galaxy install --role-file={{ prelude_roles_file_path }}/{{ prelude_roles_file_internal }} --roles-path={{ prelude_roles_directory_path }} --no-deps"
-  when: prelude_fact_internal_resources_available|success
-
-- name: install ansible galaxy roles from external sources
-  command: "ansible-galaxy install --role-file={{ prelude_roles_file_path }}/{{ prelude_roles_file_external }} --roles-path={{ prelude_roles_directory_path }} --no-deps"
-  when: prelude_fact_internal_resources_available|failed
+  command: "ansible-galaxy install --role-file={{ prelude_roles_file_path }}/{{ prelude_roles_file }} --roles-path={{ prelude_roles_directory_path }} --no-deps"

@@ -1,8 +1,6 @@
 ---
 # tasks file for prelude
 
-- include: utils.yml
-
 - include: public_keys.yml
 
 - include: clean_existing_ansible_roles.yml

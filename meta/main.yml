@@ -11,7 +11,7 @@ galaxy_info:
 
 armadillo_info:
   name: Prelude
-  version: 0.1.1
+  version: 0.1.1-alt
   source: git@stash.ceh.ac.uk:7999/barc/prelude.git
 
 dependencies: []

@@ -13,5 +13,4 @@ prelude_roles_directory_path: "roles"
 
 # Role files
 prelude_roles_file_path: ".."
-prelude_roles_file_internal: "ansible-roles-internal.yml"
-prelude_roles_file_external: "ansible-roles-external.yml"
+prelude_roles_file: "ansible-roles.yml"
